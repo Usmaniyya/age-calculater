@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form container -->
+      <div class="form-container">
+        <div class="form">
+          <label for="birthDay" class="day_label label">Day</label>
+          <input
+            type="number"
+            id="birthDay"
+            class="form-input"
+            min="1"
+            placeholder="DD"
+            required
+          />
+          <span class="error hidden" id="day-error">Must be a valid day!</span>
+        </div>
+        <div class="form">
+          <label for="birthMonth" class="month_label label">Month</label>
+          <input
+            type="number"
+            id="birthMonth"
+            class="form-input"
+            max="12"
+            placeholder="MM"
+            required
+          />
+          <span class="error hidden" id="month-error">
+            Must be a valid day!
+          </span>
+        </div>
+        <div class="form">
+          <label for="birthYear" class="year_label label">Year</label>
+          <input
+            type="number"
+            id="birthYear"
+            class="form-input"
+            min="1700"
+            placeholder="YYYY"
+            required
+          />
+          <span class="error hidden" id="year-error">Must be a valid day!</span>
+        </div>
+      </div>
+      <button class="btn">Calculate</button>
+      <!-- Result Container -->
+      <div class="result-container">
+        <!-- Result for year  -->
+        <div class="result">
+          <span id="yearValue" class="value">--</span>
+          years
+        </div>
+        <!-- Result for month -->
+        <div class="result">
+          <span id="monthValue" class="value">--</span>
+          months
+        </div>
+        <!-- Result for day  -->
+        <div class="result">
+          <span id="dayValue" class="value">--</span>
+          days
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
