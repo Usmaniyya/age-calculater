@@ -22,68 +22,75 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Form container -->
-      <div class="form-container">
-        <div class="form">
-          <label for="birthDay" class="day_label label">Day</label>
-          <input
-            type="number"
-            id="birthDay"
-            class="form-input"
-            min="1"
-            placeholder="DD"
-            required
-          />
-          <span class="error hidden" id="day-error">Must be a valid day!</span>
+    <main>
+      <h1 class="title">Age Calculator</h1>
+      <div class="container">
+        <!-- Form container -->
+        <div class="form-container">
+          <div class="form">
+            <label for="birthDay" class="day_label label">Day</label>
+            <input
+              type="number"
+              id="birthDay"
+              class="form-input"
+              min="1"
+              placeholder="DD"
+              required
+            />
+            <span class="error hidden" id="day-error">
+              Must be a valid day!
+            </span>
+          </div>
+          <div class="form">
+            <label for="birthMonth" class="month_label label">Month</label>
+            <input
+              type="number"
+              id="birthMonth"
+              class="form-input"
+              max="12"
+              placeholder="MM"
+              required
+            />
+            <span class="error hidden" id="month-error">
+              Must be a valid month!
+            </span>
+          </div>
+          <div class="form">
+            <label for="birthYear" class="year_label label">Year</label>
+            <input
+              type="number"
+              id="birthYear"
+              class="form-input"
+              min="1700"
+              placeholder="YYYY"
+              required
+            />
+            <span class="error hidden" id="year-error">
+              Must be a valid year!
+            </span>
+          </div>
         </div>
-        <div class="form">
-          <label for="birthMonth" class="month_label label">Month</label>
-          <input
-            type="number"
-            id="birthMonth"
-            class="form-input"
-            max="12"
-            placeholder="MM"
-            required
-          />
-          <span class="error hidden" id="month-error">
-            Must be a valid day!
-          </span>
-        </div>
-        <div class="form">
-          <label for="birthYear" class="year_label label">Year</label>
-          <input
-            type="number"
-            id="birthYear"
-            class="form-input"
-            min="1700"
-            placeholder="YYYY"
-            required
-          />
-          <span class="error hidden" id="year-error">Must be a valid day!</span>
+        <button class="btn">Calculate</button>
+        <!-- Result Container -->
+        <div class="result-container">
+          <!-- Result for year  -->
+          <div class="result">
+            <span id="yearValue" class="value">--</span>
+            <span id="year"></span>
+          </div>
+          <!-- Result for month -->
+          <div class="result">
+            <span id="monthValue" class="value">--</span>
+            <span id="month"></span>
+          </div>
+          <!-- Result for day  -->
+          <div class="result">
+            <span id="dayValue" class="value">--</span>
+            <span id="day"></span>
+          </div>
         </div>
       </div>
-      <button class="btn">Calculate</button>
-      <!-- Result Container -->
-      <div class="result-container">
-        <!-- Result for year  -->
-        <div class="result">
-          <span id="yearValue" class="value">--</span>
-          years
-        </div>
-        <!-- Result for month -->
-        <div class="result">
-          <span id="monthValue" class="value">--</span>
-          months
-        </div>
-        <!-- Result for day  -->
-        <div class="result">
-          <span id="dayValue" class="value">--</span>
-          days
-        </div>
-      </div>
-    </div>
+    </main>
     <script src="js/script.js"></script>
   </body>
 </html>

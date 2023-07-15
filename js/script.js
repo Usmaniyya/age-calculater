@@ -31,6 +31,11 @@ const dayValue = document.getElementById('dayValue')
 const monthValue = document.getElementById('monthValue')
 const yearValue = document.getElementById('yearValue')
 
+// check if day, month and year is plural or singular
+document.getElementById('year').innerText = 'years'
+document.getElementById('month').innerText = 'months'
+document.getElementById('day').innerText = 'days'
+
 //  30 days in Apr, Jun, Sept & Nov
 //  31 days in Jan, Mar, May, July, Aug, Oct & Dec
 //  28/29 day in Feb
@@ -77,6 +82,22 @@ const calculateAge = function (day, month, year) {
   if (dayDiff < 0) {
     dayDiff = Number(day) - currentDay
   }
+
+  if (Number(monthDiff) === 1) {
+    document.getElementById('month').innerText = 'month'
+  } else {
+    document.getElementById('month').innerText = 'months'
+  }
+  if (Number(yearDiff) === 1) {
+    document.getElementById('year').innerText = 'year'
+  } else {
+    document.getElementById('year').innerText = 'years'
+  }
+  if (Number(dayDiff) === 1) {
+    document.getElementById('day').innerText = 'day'
+  } else {
+    document.getElementById('day').innerText = 'days'
+  }
 }
 
 const setParameters = function (dataInput, dataError, dataLabel, dataStamp) {
@@ -111,7 +132,6 @@ const setParameters = function (dataInput, dataError, dataLabel, dataStamp) {
   if (Number(dataInput.value) <= timeMax && Number(dataInput.value) > 0) {
     dataError.classList.add('hidden')
     dataLabel.classList.remove('red')
-
     return true
   } else {
     dataError.classList.remove('hidden')
